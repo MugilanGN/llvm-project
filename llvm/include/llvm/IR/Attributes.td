@@ -44,6 +44,9 @@ def AlwaysInline : EnumAttr<"alwaysinline">;
 /// Function can access memory only using pointers based on its arguments.
 def ArgMemOnly : EnumAttr<"argmemonly">;
 
+/// Function can only access global memory.
+def GlobalMemOnly : EnumAttr<"globalmemonly">;
+
 /// Callee is recognized as a builtin, despite nobuiltin attribute on its
 /// declaration.
 def Builtin : EnumAttr<"builtin">;

@@ -369,6 +369,8 @@ std::string Attribute::getAsString(bool InAttrGrp) const {
     return "alwaysinline";
   if (hasAttribute(Attribute::ArgMemOnly))
     return "argmemonly";
+  if (hasAttribute(Attribute::GlobalMemOnly))
+    return "globalmemonly";
   if (hasAttribute(Attribute::Builtin))
     return "builtin";
   if (hasAttribute(Attribute::Convergent))

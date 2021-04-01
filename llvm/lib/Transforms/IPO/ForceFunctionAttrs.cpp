@@ -59,6 +59,7 @@ static Attribute::AttrKind parseAttrKind(StringRef Kind) {
       .Case("readnone", Attribute::ReadNone)
       .Case("readonly", Attribute::ReadOnly)
       .Case("argmemonly", Attribute::ArgMemOnly)
+      .Case("globalmemonly", Attribute::GlobalMemOnly)
       .Case("returns_twice", Attribute::ReturnsTwice)
       .Case("safestack", Attribute::SafeStack)
       .Case("shadowcallstack", Attribute::ShadowCallStack)

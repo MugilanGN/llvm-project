@@ -583,6 +583,12 @@ public:
   void setOnlyAccessesInaccessibleMemory() {
     addFnAttr(Attribute::InaccessibleMemOnly);
   }
+  
+  /// Determines if the function only accesses global memory
+  bool onlyAccessesGlobalMemory() const {
+    return hasFnAttribute(Attribute::GlobalMemOnly);
+  }
+  void setOnlyAccessesGlobalMemory() { addFnAttr(Attribute::GlobalMemOnly); }
 
   /// Determine if the function may only access memory that is
   ///  either inaccessible from the IR or pointed to by its arguments.
